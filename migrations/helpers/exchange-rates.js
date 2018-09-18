@@ -62,7 +62,11 @@ const setFiatRate = async (
     )
     await ExchangeRateProvider.simulate__callback(
       pendingQueryId,
-      '50000',
+      // realistic number as of 2018-09; this stubed API return value is expected to be in full euro
+      // amount
+      //
+      // ie. https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=EUR
+      '500',
       txConfig
     )
   }
